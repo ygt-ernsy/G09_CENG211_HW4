@@ -147,11 +147,11 @@ public class BoxSurfaces {
         StringBuilder sb = new StringBuilder();
         sb.append("      -----\n");
         sb.append("      | ").append(surfaces[BACK]).append(" |\n");
-        sb.append("-------------\n");
-        sb.append("| ").append(surfaces[LEFT]).append(" | ")
+        sb.append("  -------------\n");
+        sb.append("  | ").append(surfaces[LEFT]).append(" | ")
           .append(surfaces[TOP]).append(" | ")
           .append(surfaces[RIGHT]).append(" |\n");
-        sb.append("-------------\n");
+        sb.append("  -------------\n");
         sb.append("      | ").append(surfaces[FRONT]).append(" |\n");
         sb.append("      -----\n");
         sb.append("      | ").append(surfaces[BOTTOM]).append(" |\n");
