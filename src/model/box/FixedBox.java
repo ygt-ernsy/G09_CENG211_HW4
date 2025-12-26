@@ -89,4 +89,23 @@ public class FixedBox extends Box {
     public String getContentMarker() {
         return "O";
     }
+
+    /**
+     * Override to do nothing.
+     * FixedBox top side stays the same at all times and cannot be re-stamped.
+     * @param letter The letter to stamp (ignored)
+     */
+    @Override
+    public void stampTopSide(char letter) {
+    // Do nothing - FixedBox top side cannot be changed.
+    }
+
+    /**
+     * Returns false since FixedBox cannot be stamped.
+     * @return false
+     */
+    @Override
+    public boolean canBeStamped() {
+        return false;
+    }
 }
