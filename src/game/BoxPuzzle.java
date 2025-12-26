@@ -86,6 +86,14 @@ public class BoxPuzzle {
         menuHandler.displayMessage("---> TURN " + turnNumber + " – FIRST STAGE:");
         
         Position edgePos = menuHandler.promptEdgeBoxSelection();
+
+        Box selectedBox = boxGrid.getBox(edgePos);
+        if (!selectedBox.canRoll()) {
+            menuHandler.displayMessage("The chosen box at " + edgePos.toDisplayString() + 
+                " is a FixedBox and cannot be rolled. Continuing to the next turn...");
+            return;  // Turn is wasted
+        }
+
         Direction direction = menuHandler.promptRollDirection(edgePos);
         
         try {

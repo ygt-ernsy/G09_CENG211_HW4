@@ -152,7 +152,7 @@ public abstract class Box implements Rollable, Stampable, Openable {
      * @return The content marker
      */
     public String getContentMarker() {
-        if (opened || containedTool == null) {
+        if (opened) {
             return "O";
         }
         return "M";
